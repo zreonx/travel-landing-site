@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "@/constants";
 import Button from "./Button";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useScreenType from "react-screentype-hook";
 
 type NavigationLinksType = {
@@ -15,7 +15,7 @@ type NavigationLinksType = {
     isLargeDesktop: boolean;
   };
   isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
 };
 
 const NavigationLinks = ({
