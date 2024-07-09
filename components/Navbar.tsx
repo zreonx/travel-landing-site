@@ -15,7 +15,7 @@ type NavigationLinksType = {
     isLargeDesktop: boolean;
   };
   isOpen: boolean;
-  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const NavigationLinks = ({
