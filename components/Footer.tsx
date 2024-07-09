@@ -64,7 +64,7 @@ const Footer = () => {
 type FooterColumnProps = {
   title: string;
   children: React.ReactNode;
-  index: number;
+  index?: number;
 };
 
 const FooterColumn = ({ title, children, index }: FooterColumnProps) => {
