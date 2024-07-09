@@ -55,8 +55,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (screenType.isDesktop) {
-      setIsOpen(false);
+    if (typeof window !== "undefined") {
+      if (screenType.isDesktop) {
+        setIsOpen(false);
+      }
     }
   }, [screenType]);
 
