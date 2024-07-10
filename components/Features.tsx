@@ -27,14 +27,15 @@ const Features = () => {
             <h2 className='bold-40 lg:bold-64'>Our Features</h2>
           </div>
           <ul className='mt-10 grid gap-10 md:grid-cols-2 lg:mt-20 lg:gap-20 '>
-            {FEATURES.map((feature) => (
-              <FeatureItem
-                title={feature.title}
-                key={feature.title}
-                icon={feature.icon}
-                variant={feature.variant}
-                description={feature.description}
-              />
+            {FEATURES.map((feature, index) => (
+              <React.Fragment key={index}>
+                <FeatureItem
+                  title={feature.title}
+                  icon={feature.icon}
+                  variant={feature.variant}
+                  description={feature.description}
+                />
+              </React.Fragment>
             ))}
           </ul>
         </div>
@@ -46,7 +47,6 @@ const Features = () => {
 type FeatureItemProps = {
   title: string;
   icon: string;
-  key: string;
   variant: string;
   description: string;
 };
@@ -54,7 +54,6 @@ type FeatureItemProps = {
 const FeatureItem = ({
   title,
   icon,
-  key,
   variant,
   description,
 }: FeatureItemProps) => {
